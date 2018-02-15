@@ -42,7 +42,14 @@ namespace Application.Models
 
         public static int GetWordScore(string word)
         {
-            return 3;
+            char[] chars = word.ToCharArray();
+            int score = 0;
+            foreach (char c in chars)
+            {
+                score += GetScore(c);
+            }
+
+            return score;
         }
     }
 }

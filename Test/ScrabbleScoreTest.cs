@@ -30,18 +30,18 @@ namespace Application.Tests
         {
             Assert.AreEqual(ScrabbleScore.GetScore('f'), ScrabbleScore.GetScore('F'));
         }
-
+        [TestMethod]
         public void GetWordScore_ReturnsScore()
         {
             Assert.AreEqual(ScrabbleScore.GetWordScore("potato"), 8);
             Assert.AreEqual(ScrabbleScore.GetWordScore("zoo"), 12);
         }
-
+        [TestMethod]
         public void GetWordScore_ReturnsScoreIgnoringNonLetter()
         {
             Assert.AreEqual(ScrabbleScore.GetWordScore("catastrophe"), ScrabbleScore.GetWordScore("cat#ast!roph##$$(3)e"));
         }
-
+        [TestMethod]
         public void GetWordScore_IsCaseInsensitive()
         {
             Assert.AreEqual(ScrabbleScore.GetWordScore("TRAIN"), ScrabbleScore.GetWordScore("train"));

@@ -11,5 +11,13 @@ namespace Application.Controllers
         {
             return View();
         }
+
+        [HttpPost("/score")]
+        public int ReturnScore(string data)
+        {
+            Console.WriteLine($"Input = {data}");
+            int score = ScrabbleScore.GetWordScore(data);
+            return score;
+        }
     }
 }

@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Application</title>
-    </head>
-    <body>
-        <h1>HTML GOES HERE</h1>
-    </body>
-</html>
+@{
+    Layout = "_Layout";
+}
+
+<script src="~/js/scrabble.js"></script>
+
+<h1>Scrabble Score</h1>
+
+<div id="score-display">
+    <h3>Score: <span name="score-display"></span></h3>
+</div>
+
+<body>
+    <form id="scrabble-form" class="" action="#" method="post">
+        <label>Enter a Word<input type="text" name="scrabble-word"></label><br>
+        <button type="submit">Get Score</button>
+    </form>
+</body>
